@@ -71,7 +71,14 @@ struct fpsimd_context {
 	struct _aarch64_ctx head;
 	__u32 fpsr;
 	__u32 fpcr;
+	#ifdef __SIZEOF_INT128__
 	__uint128_t vregs[32];
+	#else
+	struct {
+		__u64 lower;
+		__u64 higher;
+	} vregs[32];
+	#endif
 };
 
 /* ESR_EL1 context */

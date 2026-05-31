@@ -182,7 +182,7 @@ dtc_cpp_flags  = -Wp,-MD,$(depfile).pre.tmp -nostdinc                    \
 		 -I$(srctree)/arch/$(SRCARCH)/boot/dts/include           \
 		 -I$(objtree)/include/                                   \
 		 -Iarch/$(SRCARCH)/boot/dts                              \
-		 -undef -D__DTS__
+		-undef -D__DTS__
 
 # Finds the multi-part object the current object will be linked into
 modname-multi = $(sort $(foreach m,$(multi-used),\

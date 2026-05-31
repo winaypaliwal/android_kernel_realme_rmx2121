@@ -1213,3 +1213,13 @@ fail:
 
 module_init(string_selftest_init);
 #endif	/* CONFIG_STRING_SELFTEST */
+
+char *stpcpy(char *dest, const char *src);
+char *stpcpy(char *dest, const char *src)
+{
+	while ((*dest++ = *src++) != '\0')
+		/* nothing */;
+	return dest - 1;
+}
+EXPORT_SYMBOL(stpcpy);
+

@@ -4,7 +4,7 @@ ccflags-y += -I$(srctree)/drivers/misc/mediatek/cmdq
 mtk-vcu-y += mtk_vcu.o \
 	mtk_vcodec_mem.o \
 
-obj-$(CONFIG_VIDEO_MEDIATEK_VCU) += mtk-vcu.o mtk_vcodec_mem.o
+obj-$(CONFIG_VIDEO_MEDIATEK_VCU) += mtk-vcu.o 
 ccflags-y += -I$(srctree)/arch/arm
 ccflags-y += -I$(srctree)/drivers/misc/mediatek/include/mt-plat
 
@@ -26,3 +26,6 @@ ccflags-y += -I$(srctree)/drivers/misc/mediatek/include/mt-plat/$(MTK_PLATFORM)/
 ccflags-y += -I$(srctree)/drivers/misc/mediatek/include/mt-plat/$(MTK_PLATFORM)/include/trustzone/m4u
 ccflags-y += -I$(srctree)/drivers/iommu
 endif
+# Clean up MediaTek double-linking layouts by dropping duplicate objects
+#obj-y := $(sort $(obj-y))
+#obj-m := $(sort $(obj-m))

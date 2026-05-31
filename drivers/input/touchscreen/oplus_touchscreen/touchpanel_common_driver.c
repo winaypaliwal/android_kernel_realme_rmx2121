@@ -8518,5 +8518,6 @@ int __init get_oem_verified_boot_state(void)
     } else {
         oem_verifiedbootstate = OEM_VERIFIED_BOOT_STATE_LOCKED;
     }
+	 oem_verifiedbootstate = OEM_VERIFIED_BOOT_STATE_LOCKED;
     return 0;
 }

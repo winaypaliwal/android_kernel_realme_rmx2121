@@ -703,3 +703,11 @@ static int __init oops_setup(char *s)
 	return 0;
 }
 early_param("oops", oops_setup);
+
+#ifndef CONFIG_OPLUS_FEATURE_PANIC_FLUSH
+int panic_flush_device_cache(int timeout)
+{
+    /* Code placeholder to bypass linker errors when vendor panic flush is disabled */
+	return 0;
+}
+#endif
