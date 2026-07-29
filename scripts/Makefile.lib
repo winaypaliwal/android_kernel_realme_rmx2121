@@ -182,6 +182,12 @@ dtc_cpp_flags  = -Wp,-MD,$(depfile).pre.tmp -nostdinc                    \
 		 -I$(srctree)/arch/$(SRCARCH)/boot/dts/include           \
 		 -I$(objtree)/include/                                   \
 		 -Iarch/$(SRCARCH)/boot/dts                              \
+		-I$(srctree)/arch/arm64/boot/dts/mediatek             \
+		-I$(srctree)/arch/arm64/boot/dts/mediatek/oppo6889      \
+                 -I$(srctree)/arch/arm64/boot/dts/mediatek/oppo6889/20131 \
+                 -I$(srctree)/arch/arm64/boot/dts/mediatek/oppo6889/20255 \
+                 -I$(srctree)/arch/arm64/boot/dts/mediatek/oppo6889/20601 \
+                 -I$(srctree)/arch/arm64/boot/dts/mediatek/oppo6889/20645 \
 		-undef -D__DTS__
 
 # Finds the multi-part object the current object will be linked into

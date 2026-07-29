@@ -711,3 +711,16 @@ int panic_flush_device_cache(int timeout)
 	return 0;
 }
 #endif
+
+#ifndef CONFIG_MTK_AEE_FEATURE
+/* Stub implementations to satisfy peripheral drivers when MediaTek AEE is disabled */
+int aee_mode = 0;
+EXPORT_SYMBOL(aee_mode);
+
+bool aee_is_enable(void)
+{
+    return false;
+}
+EXPORT_SYMBOL(aee_is_enable);
+#endif
+

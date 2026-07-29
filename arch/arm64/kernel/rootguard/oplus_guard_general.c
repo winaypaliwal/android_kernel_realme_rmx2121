@@ -78,7 +78,7 @@ static int __init boot_state_init(void)
         	g_boot_state = BOOT_STATE__RED;
        	}
 	}
-	g_boot_state = BOOT_STATE__GREEN;
+//	g_boot_state = BOOT_STATE__GREEN;
 	return 0;
 }
 
